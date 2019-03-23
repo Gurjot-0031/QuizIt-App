@@ -65,14 +65,14 @@ padding: 2rem;
 /* Buttons */
 .btn{
     font-size: 2.2rem;
-    padding: 2rem 0;
+    padding: 3rem 0;
     width: 20rem;
     text-align: center;
     border: 0.2rem solid forestgreen;
     margin-bottom: 1rem;
     text-decoration: cornflowerblue;
-    color: blue;
-    background-color: burlywood;
+    color: pink;
+    background-color: red;
 
 }
 .btn:hover{
