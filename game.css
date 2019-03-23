@@ -1,0 +1,25 @@
+.choice-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 75%;
+    font-size: 1.75rem;
+    border: 0.2rem solid rgb(23, 34, 235);
+    background-color: white;
+}
+
+.choice-prefix{
+    padding: 1.3rem 1rem;
+    background-color: crimson;
+    color: white;
+}
+.choice-text{
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 34, 2);
+    transform: translate3d(-0.2rem);
+    transition: transform 150ms;
+}
