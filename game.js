@@ -1,7 +1,7 @@
 // console.log("HELLO FROM THE SIDE");
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
-console.log(choices); 
+//console.log(choices); 
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -64,17 +64,18 @@ function getNewQuestion(){
     question.innerText = currentQuestion.question;
 
     choices.forEach(element => {
-        const number = element.dataset["number"];console.log(number);
+        const number = element.dataset["number"];
+        //console.log(number);
         element.innerText = currentQuestion["choice"+number];
     });
 //removing questions that are done
     availableQuestions.splice(questionIndex,1);
     acceptingAnswers = true;
 }
-
+//adding event listeneres to the choices
 choices.forEach(choice =>{
     choice.addEventListener("click",e=>{
-        console.log(e.target);
+        //console.log(e.target);
 
         if (!acceptingAnswers) {
             return;
@@ -82,7 +83,19 @@ choices.forEach(choice =>{
         acceptingAnswers=false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        getNewQuestion();
+       
+        //console.log(selectedAnswer== currentQuestion.answer);
+        //getting correct 
+        const classToApply = selectedAnswer==currentQuestion.answer ? 'correct' : 'incorrect';
+
+        selectedChoice.parentElement.classList
+        console.log(classToApply);
+        selectedChoice.parentElement.classList.add(classToApply);
+        setTimeout(() =>{
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        },1000);
+  
 
     })
 });

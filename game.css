@@ -23,3 +23,11 @@
     transform: translate3d(-0.2rem);
     transition: transform 150ms;
 }
+
+.correct{
+    background-color: greenyellow;
+}
+
+.incorrect{
+    background-color: red;
+}
