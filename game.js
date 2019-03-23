@@ -1,104 +1,114 @@
-// console.log("HELLO FROM THE SIDE");
-const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
-//console.log(choices); 
-
+const question = document.getElementById("question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game");
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions = [];
+let availableQuesions = [];
 
-let questions = [
+let questions = [];
 
+fetch(
+  "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
+)
+  .then(res => {
+    return res.json();
+  })
+  .then(loadedQuestions => {
+    console.log(loadedQuestions.results);
+    questions = loadedQuestions.results.map(loadedQuestion => {
+      const formattedQuestion = {
+        question: loadedQuestion.question
+      };
 
-    {
-        question: "BLABALCLBABVLABVEL?",
-        choice1: "gjkrlgjr",
-        choice2: "gjkrlgjr",
-        choice3: "gjkrlgjr",
-        choice4: "gjkrlgjr",
-        answer: 1  
+      const answerChoices = [...loadedQuestion.incorrect_answers];
+      formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+      answerChoices.splice(
+        formattedQuestion.answer - 1,
+        0,
+        loadedQuestion.correct_answer
+      );
 
-    },
-    {
-        question: "rbvwrg?",
-        choice1: "gjkrg4glgjr",
-        choice2: "gjkrg4lgjr",
-        choice3: "gjkrg4g4lgjr",
-        choice4: "gjkgrlgjr",
-        answer: 4  
+      answerChoices.forEach((choice, index) => {
+        formattedQuestion["choice" + (index + 1)] = choice;
+      });
 
-    },
-    {
-        question:"fawrg?",
-        choice1: "gjkrg44wgwhglgjr",
-        choice2: "gjkrgw4g4wgg4lgjr",
-        choice3: "gjkr4whwhg4g4lgjr",
-        choice4: "gjkghwhhrlgjr",
-        answer: 2  
+      return formattedQuestion;
+    });
 
-    }
-]
+    startGame();
+  })
+  .catch(err => {
+    console.error(err);
+  });
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
 
-function startGame(){
- questionCounter=0;
- score=0;
- availableQuestions = [...questions];
- console.log(availableQuestions);
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = [...questions];
+  getNewQuestion();
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
+};
 
- getNewQuestion();
-}
-function getNewQuestion(){
-    if (availableQuestions.length===0 || questionCounter>=MAX_QUESTIONS) {
-        // go to the end page
-        return window.location.assign("/score.html");
+getNewQuestion = () => {
+  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    localStorage.setItem("mostRecentScore", score);
+    //go to the end page
+    return window.location.assign("/end.html");
+  }
+  questionCounter++;
+  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+  //Update the progress bar
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
+  const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+  currentQuestion = availableQuesions[questionIndex];
+  question.innerText = currentQuestion.question;
+
+  choices.forEach(choice => {
+    const number = choice.dataset["number"];
+    choice.innerText = currentQuestion["choice" + number];
+  });
+
+  availableQuesions.splice(questionIndex, 1);
+  acceptingAnswers = true;
+};
+
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    const classToApply =
+      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+    if (classToApply === "correct") {
+      incrementScore(CORRECT_BONUS);
     }
-    questionCounter++;
-    const questionIndex = Math.floor(Math.random()*availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
 
-    choices.forEach(element => {
-        const number = element.dataset["number"];
-        //console.log(number);
-        element.innerText = currentQuestion["choice"+number];
-    });
-//removing questions that are done
-    availableQuestions.splice(questionIndex,1);
-    acceptingAnswers = true;
-}
-//adding event listeneres to the choices
-choices.forEach(choice =>{
-    choice.addEventListener("click",e=>{
-        //console.log(e.target);
+    selectedChoice.parentElement.classList.add(classToApply);
 
-        if (!acceptingAnswers) {
-            return;
-        }
-        acceptingAnswers=false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-       
-        //console.log(selectedAnswer== currentQuestion.answer);
-        //getting correct 
-        const classToApply = selectedAnswer==currentQuestion.answer ? 'correct' : 'incorrect';
-
-        selectedChoice.parentElement.classList
-        console.log(classToApply);
-        selectedChoice.parentElement.classList.add(classToApply);
-        setTimeout(() =>{
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        },1000);
-  
-
-    })
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
+  });
 });
-startGame();
- 
 
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+};
