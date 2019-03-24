@@ -38,13 +38,13 @@
 
         <h2 class="subs-title text-center">Are You Ready To Test Your Ability?</h2>
         <div class="subcription-info text-center">
-          <form class="subscribe_form" action="Topic.html" method="post">
-            <input required="" value="" placeholder="What shall I call you?" class="reg-padding" id="full_name" name="email" type="text">
+          <form id="submitForm" class="subscribe_form" >
+            <input required="" value="" placeholder="What shall I call you?" class="reg-padding" id="name" name="name" type="text">
             <br>
             <div class="reg-padding" align="center" style="margin-top: 10px;">
-              <input required="" value="" placeholder="I can't guess your age. Will you help me out?" class="reg-padding"  id="age" name="email" type="number">
+              <input required="" value="" placeholder="I can't guess your age. Will you help me out?" class="reg-padding"  id="age" name="age" type="number">
             </div>
-            <input class="subscribe" name="subscribe" value="Proceed!" type="submit">
+            <input class="subscribe" name="subscribe" value="Proceed!" type="button" onclick="getAge()">
 
           </form>
           <p class="sub-p">We Promise to be Unbiased.</p>
@@ -100,7 +100,7 @@
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/wow.js"></script>
   <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+  <script src="index.js"></script>
 
 </body>
 
