@@ -1,4 +1,4 @@
-=
+
     document.addEventListener('submit', function (e) {
         e.preventDefault();
         console.log(e.target);
@@ -7,6 +7,6 @@
         console.log(user);
 
         if (user==="adults"){
-
+            window.location.assign()
         }
     })
