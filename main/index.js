@@ -13,7 +13,7 @@ function getAge(){
          userType = "adults";
 
     console.log(userType);
-    window.location.assign("topic.html/");
+    window.location.assign("topic.html");
    // getTopics(age)
 
 }
