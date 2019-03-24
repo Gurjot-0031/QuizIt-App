@@ -3,6 +3,9 @@
 
     document.addEventListener('submit',function (e) {
         e.preventDefault();
+        var comboBox = document.getElementById("#comboBox");
+
+
 
         var name = document.getElementById("name").value;
         var age = document.getElementById("age").value;
@@ -18,6 +21,7 @@
         console.log(userType);
         //going to the next page
         localStorage.setItem("userType",userType);
+
         window.location.assign("topic.html");
     })
 
