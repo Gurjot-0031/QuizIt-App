@@ -1,19 +1,26 @@
-const form  = document.getElementById('#submitForm'); //getting the form element
+
 
 function getAge(){
-    var name = document.getElementById("name").value;
-    var age = document.getElementById("age").value;
-    var userType =null;
-    if (age<=12){
-         userType = "child";
-    }
-    else if(age<=19 && age>=13)
-         userType = "teen";
-    else
-         userType = "adults";
+    document.addEventListener('submit',function (e) {
+        e.preventDefault();
 
-    console.log(userType);
-    window.location.assign("topic.html");
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var userType =null;
+        if (age<=12){
+            userType = "child";
+        }
+        else if(age<=19 && age>=13)
+            userType = "teen";
+        else
+            userType = "adults";
+
+        console.log(userType);
+        //going to the next page
+        localStorage.setItem("userType",userType);
+        window.location.assign("topic.html");
+    })
+
    // getTopics(age)
 
 }

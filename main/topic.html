@@ -25,6 +25,7 @@
             text-align: center;
         }
     </style>
+
 </head>
 
 <body>
@@ -45,7 +46,7 @@
     <section id="about" class="section-padding">
         <div class="container" >
 
-            <form class="subscribe_form" style="width: 25%;  margin-left: 36%;" >
+            <form class="subscribe_form" style="width: 25%;  margin-left: 36%;" id="form">
 
                 <select   name="difficulty" style="right: 0px;
     top: 0px;
@@ -87,7 +88,7 @@
                 <option value="32">Entertainment: Cartoon &amp; Animations</option>
                 </select>
                 <br>
-                <input type="submit" value="Start Test" style="margin-top: 15%; ">
+                <input type="submit" value="Start Test" style="margin-top: 15%; " name="submitButton" onclick="runFunction()">
             </form>
 
         </div>
@@ -102,7 +103,16 @@
 <script src="js/jquery.countdown.min.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/custom.js"></script>
-<script src="contactform/contactform.js"></script>
+<script >
+    function runFunction() {
+
+        document.addEventListener('submit', function (e) {
+            e.preventDefault();
+            console.log("JEYA"+e.target);
+
+        })
+    }
+</script>
 
 </body>
 
