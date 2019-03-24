@@ -6,8 +6,8 @@
         const user = localStorage.getItem("userType");
         console.log(user);
 
-        if (user==="adults"){
-            window.location.assign()
+        if (user==="teen"){
+            window.location.assign("teen.html")
         }
     })
 
