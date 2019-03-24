@@ -1,9 +1,12 @@
-function runFunction() {
-
+=
     document.addEventListener('submit', function (e) {
         e.preventDefault();
-        console.log("JEYA"+e.target);
+        console.log(e.target);
         //getting userType from local storage
-        const userType = JSON.parse(localStorage.getItem("userType"));
+        const user = localStorage.getItem("userType");
+        console.log(user);
+
+        if (user==="adults"){
+
+        }
     })
-}

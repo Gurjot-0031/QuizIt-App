@@ -1,12 +1,12 @@
 
 
-function getAge(){
+
     document.addEventListener('submit',function (e) {
         e.preventDefault();
 
         var name = document.getElementById("name").value;
         var age = document.getElementById("age").value;
-        var userType =null;
+        let userType =null;
         if (age<=12){
             userType = "child";
         }
@@ -23,7 +23,7 @@ function getAge(){
 
    // getTopics(age)
 
-}
+
 
 function getTopics(userType) {
     var childrenTopis = [
