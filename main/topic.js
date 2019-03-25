@@ -76,7 +76,7 @@
             "Animals",
             "Science: Gadgets",
             "Science: Computers"
-        );
+        );//
 
 
         var adultsTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31,26,22,24,18,11,12);
