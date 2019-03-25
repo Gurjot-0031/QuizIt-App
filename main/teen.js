@@ -17,17 +17,18 @@ let questions = [];
 const category  = localStorage.getItem("category");
 //need to update the category
 const user = localStorage.getItem("userType");
+var difficulty = "";
 //easy for a child
 if (user==="adults"){
-    const difficulty = 'hard';
+   difficulty = 'hard';
 }
 else if (user==="teen"){
-    const difficulty = 'medium';
+     difficulty = 'medium';
 }
 else {
-    const difficulty = 'easy';
+     difficulty = 'easy';
 }
-const urls = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
+const url = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
 const urls = `https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}`;
 fetch(
     urls
@@ -68,7 +69,7 @@ const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
 
 startGame = () => {
-    console.log(category);
+    console.log(category+user+difficulty);
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
