@@ -1,6 +1,7 @@
 
-
-
+localStorage.setItem("boolean","false");
+const username = document.getElementById("name");
+localStorage.setItem("username",username);
     document.addEventListener('submit',function (e) {
         e.preventDefault();
         var comboBox = document.getElementById("#comboBox");

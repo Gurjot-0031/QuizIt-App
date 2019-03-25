@@ -7,7 +7,7 @@
     <title>Congrats!</title>
     <link rel="stylesheet" href="app.css" />
   </head>
-  <body>
+  <body onload="checkBeforeLoad()">
     <div class="container">
       <div id="end" class="flex-center flex-column">
         <h1 id="finalScore"></h1>
@@ -28,7 +28,7 @@
             Save
           </button>
         </form>
-        <a class="btn" href="teen.html">Play Again</a>
+        <a class="btn" href="topic.html" id="restartButton">Play Again</a>
         <a class="btn" href="/">Go Home</a>
       </div>
     </div>

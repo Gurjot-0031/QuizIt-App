@@ -1,3 +1,22 @@
+const user = localStorage.getItem("userType");
+var difficulty = "";
+const username = localStorage.getItem("username");
+
+//getting the boolean
+var boolean = localStorage.getItem("boolean");
+if (boolean==="false") {
+    console.log(boolean +"afweve4");
+    if (user === "adults") {
+        difficulty = 'hard';
+    } else if (user === "teen") {
+        difficulty = 'medium';
+    } else {
+        difficulty = 'easy';
+    }
+    localStorage.setItem("difficulty",difficulty);
+}
+
+
 
     document.addEventListener('submit', function (e) {
         e.preventDefault();

@@ -18,18 +18,11 @@ const categoryVal  = localStorage.getItem("categoryVal");
 const categoryText = localStorage.getItem("categoryText");
 //need to update the category
 const user = localStorage.getItem("userType");
-var difficulty = "";
+var difficulty = localStorage.getItem("difficulty")||"";
 //easy for a child
-if (user==="adults"){
-   difficulty = 'hard';
-}
-else if (user==="teen"){
-     difficulty = 'medium';
-}
-else {
-     difficulty = 'easy';
-}
-const url = `https://opentdb.com/api.php?amount=10&category=${categoryVal}&difficulty=${difficulty}&type=multiple`;
+
+localStorage.setItem("difficulty",difficulty);
+const url = `https://opentdb.com/api.php?amount=10&category=${categoryVal}&difficulty=${difficulty}`;
 const urls = `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`;
 fetch(
     url
