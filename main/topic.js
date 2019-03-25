@@ -81,27 +81,23 @@
 
         var adultsTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31,26,22,24,18,11,12);
         var teensTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31);
-        var childrenTopicsValues = new Array(32,29,19,15,9,27,30,18)''
+        var childrenTopicsValues = new Array(32,29,19,15,9,27,30,18);
+
         if(userType === "child"){
-            console.log(childrenTopics[i].charAt(0)+childrenTopics[i].charAt(1));
+
             for (var i=0; i < childrenTopics.length;++i){
                 addOption(document.drop_list.topic_list, childrenTopics[i], childrenTopicsValues[i]);
-
-
             }
-            console.log(userType);
         }else if(userType === "teen"){
 
             for (var i=0; i < teensTopics.length;++i){
                 addOption(document.drop_list.topic_list, teensTopics[i], teensTopicsValues[i]);
             }
-            console.log(userType);
         }else if(userType === "adults"){
 
             for (var i=0; i < adultsTopics.length;++i){
                 addOption(document.drop_list.topic_list, adultsTopics[i], adultsTopicsValues[i]);
             }
-            console.log(userType);
         }
 
 
