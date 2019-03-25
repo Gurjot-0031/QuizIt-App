@@ -9,7 +9,7 @@
 
         //saving to local storage getting the category
         var e = document.getElementById("comboBox");
-        var category  = e.options[e.selectedIndex].text;
+        var category  = e.options[e.selectedIndex].value;
         localStorage.setItem("category",category);
 
         if (user==="adults"){
