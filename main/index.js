@@ -23,56 +23,5 @@
         localStorage.setItem("userType",userType);
 
         window.location.assign("topic.html");
+
     })
-
-   // getTopics(age)
-
-
-
-function getTopics(userType) {
-    var childrenTopis = [
-        "Entertainment: Cartoon & Animations",
-        "Entertainment: Comics",
-        "Science: Mathematics",
-        "Entertainment: Video Games",
-        "General Knowledge",
-        "Animals",
-        "Science: Gadgets",
-        "Science: Computers"
-    ];
-
-    var teensTopics = [
-        "Entertainment: Cartoon & Animations",
-        "Entertainment: Comics",
-        "Science: Mathematics",
-        "Entertainment: Video Games",
-        "General Knowledge",
-        "Animals",
-        "Science: Gadgets",
-        "Sports",
-        "Entertainment: Board Games",
-        "Sports",
-        "Vehicles",
-        "Entertainment: Japanese Anime & Manga"
-    ];
-
-    var adultsTopics = [
-        "Entertainment: Cartoon & Animations",
-        "Entertainment: Comics",
-        "Science: Mathematics",
-        "Entertainment: Video Games",
-        "General Knowledge",
-        "Animals",
-        "Science: Gadgets",
-        "Sports",
-        "Entertainment: Board Games",
-        "Sports",
-        "Vehicles",
-        "Entertainment: Japanese Anime & Manga",
-        "Sports",
-        "Celebrities"
-    ];
-    if (age<=12) {
-
-    }
-}
