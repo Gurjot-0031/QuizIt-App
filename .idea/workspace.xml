@@ -3,42 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="03f2cd0e-e4a4-4b19-b15f-af51c5775283" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/adult.html" beforeDir="false" afterPath="$PROJECT_DIR$/adult.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/adult.js" beforeDir="false" afterPath="$PROJECT_DIR$/adult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/animate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/end.html" beforeDir="false" afterPath="$PROJECT_DIR$/end.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/end.js" beforeDir="false" afterPath="$PROJECT_DIR$/end.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/highscores.css" beforeDir="false" afterPath="$PROJECT_DIR$/highscores.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/highscores.html" beforeDir="false" afterPath="$PROJECT_DIR$/highscores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/highscores.js" beforeDir="false" afterPath="$PROJECT_DIR$/highscores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/img/banner01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/banner01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/end.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/end.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/end.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/end.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/jquery.countdown.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.countdown.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/js/wow.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/teen.html" beforeDir="false" afterPath="$PROJECT_DIR$/teen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/teen.js" beforeDir="false" afterPath="$PROJECT_DIR$/teen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/topic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/topic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +22,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -66,6 +31,15 @@
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -84,15 +58,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -209,6 +174,7 @@
         <option value="$PROJECT_DIR$/main/index.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/main/topic.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -231,16 +197,6 @@
               <item name="QuizItDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuizItDemo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="QuizItDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuizItDemo" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuizItDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuizItDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="refer" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -253,7 +209,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553523305887" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553523456173" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -322,7 +278,7 @@
       <updated>1553362069973</updated>
       <workItem from="1553362071373" duration="184000" />
       <workItem from="1553380604543" duration="5708000" />
-      <workItem from="1553451252743" duration="20491000" />
+      <workItem from="1553451252743" duration="20613000" />
     </task>
     <task id="LOCAL-00001" summary="arwv">
       <created>1553387977429</created>
@@ -443,14 +399,22 @@
       <option name="project" value="LOCAL" />
       <updated>1553522762334</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="deployment changes">
+      <created>1553523319413</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1553523319413</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26383000" />
+    <option name="totallyTimeSpent" value="26505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15164521" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -697,9 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/topic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -763,6 +724,13 @@
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
