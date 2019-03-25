@@ -6,9 +6,22 @@
         const user = localStorage.getItem("userType");
         console.log(user);
 
+
+        //saving to local storage getting the category
+        var e = document.getElementById("comboBox");
+        var category  = e.options[e.selectedIndex].text;
+        localStorage.setItem("category",category);
+
         if (user==="adults"){
-            window.location.assign()
+            window.location.assign("adult.html");
         }
+        else if (user==="teen"){
+            window.location.assign("teen.html");
+        }
+        else window.location.assign("teen.html");
+
+
+
     })
 
     //used by the addOption_list method to dynamically add options to the select view
@@ -71,6 +84,8 @@
 
             for (var i=0; i < childrenTopics.length;++i){
                 addOption(document.drop_list.topic_list, childrenTopics[i], childrenTopics[i]);
+
+
             }
             console.log(userType);
         }else if(userType === "teen"){
@@ -86,5 +101,7 @@
             }
             console.log(userType);
         }
+
+
 
     }
