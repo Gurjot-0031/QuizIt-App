@@ -47,7 +47,6 @@
             "Science: Gadgets",
             "Science: Computers"
     );
-
         var teensTopics = new Array(
             "Entertainment: Cartoon & Animations",
             "Entertainment: Comics",
