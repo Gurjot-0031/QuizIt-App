@@ -11,6 +11,7 @@
         }
     })
 
+    //used by the addOption_list method to dynamically add options to the select view
     function addOption(selectBox,text,value )
     {
         var optn = document.createElement("Option");
@@ -19,8 +20,9 @@
         selectBox.options.add(optn);
     }
 
+    //uses the addOption method to dynamically add options to the select view
     function addOption_list(){
-
+        //test
         var userType = localStorage.getItem("userType");
         var childrenTopics = new Array(
             "Entertainment: Cartoon & Animations",
