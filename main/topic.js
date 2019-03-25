@@ -9,8 +9,10 @@
 
         //saving to local storage getting the category
         var e = document.getElementById("comboBox");
-        var category  = e.options[e.selectedIndex].value;
-        localStorage.setItem("category",category);
+        var categoryValue  = e.options[e.selectedIndex].value;
+        localStorage.setItem("categoryVal",categoryValue);
+        var categoryText  = e.options[e.selectedIndex].text;
+        localStorage.setItem("categoryText",categoryText);
 
         if (user==="adults"){
             window.location.assign("adult.html");
@@ -82,7 +84,6 @@
         var adultsTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31,26,22,24,18,11,12);
         var teensTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31);
         var childrenTopicsValues = new Array(32,29,19,15,9,27,30,18);
-
         if(userType === "child"){
 
             for (var i=0; i < childrenTopics.length;++i){
