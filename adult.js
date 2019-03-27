@@ -5,6 +5,9 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
+
+
+
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -85,6 +88,8 @@ getNewQuestion = () => {
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
+    console.log(currentQuestion);
+    console.log(currentQuestion.answer);
     question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
@@ -139,3 +144,35 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+
+document.getElementById("form").addEventListener('submit',function (e) {
+
+    e.preventDefault();
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const inputText = document.getElementById("textField");
+
+   // if (!acceptingAnswers) return;
+
+   if ( inputText.value.toLowerCase().trim() ===currentQuestion["choice" + currentQuestion.answer].toLowerCase().trim()){
+        console.log("Correct");
+       inputText.parentElement.classList.add("correct");
+       setTimeout(function () {
+           inputText.parentElement.classList.remove("correct");
+           getNewQuestion();
+       },1000);
+
+
+   }
+   else {
+       inputText.parentElement.classList.add("incorrect");
+       setTimeout(function () {
+           inputText.parentElement.classList.remove("incorrect");
+           getNewQuestion();
+       },1000);
+   }
+
+
+
+})
