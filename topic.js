@@ -37,9 +37,9 @@ if (boolean==="false") {
             window.location.assign("adult.html");
         }
         else if (user==="teen"){
-            window.location.assign("teen.html");
+            window.location.assign("teen_child.html");
         }
-        else window.location.assign("teen.html");
+        else window.location.assign("teen_child.html");
 
 
 

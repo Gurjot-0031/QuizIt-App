@@ -39,7 +39,8 @@ fetch(
             //CREATING a formatted question OBJECT
             const formattedQuestion = {
                 question: decodeHtml(loadedQuestion.question),
-                type: loadedQuestion.type
+                type: loadedQuestion.type,
+                correct_answer: loadedQuestion.correct_answer
             };
     //CReating an answer choices array in the map to have all the incorrect answers
             const answerChoices = [...loadedQuestion.incorrect_answers];
@@ -109,11 +110,14 @@ getNewQuestion = () => {
     if (currentQuestion.type==='boolean'){
         document.getElementById("extra1").style.display = "none";
         document.getElementById("extra2").style.display = "none";
-        let count = 1;
-        choices.forEach(choice=>{
-            choice.innerText = currentQuestion["choice"+count];
-            count++;
-        });
+        document.getElementById("boolean_one").innerText=currentQuestion["choice1"];
+        document.getElementById("boolean_two").innerText=currentQuestion["choice2"];
+
+        // choices.forEach(choice=>{
+        //     choice.innerText = currentQuestion["choice"+count];
+        //     count++;
+        //     console.log(count+"COUNT");
+        // });
 
     }
     else {
@@ -138,13 +142,26 @@ choices.forEach(choice => {
 
         acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
+       // const selectedAnswer = selectedChoice.dataset["number"];
+        const selectedAnswer = selectedChoice.innerText;
 
         const classToApply =
-            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+            selectedAnswer === currentQuestion.correct_answer ? "correct" : "incorrect";
 
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
+        }
+        else {
+            //if the quesion is incorrect then, we visualize the correct one
+            choices.forEach(item =>{
+               if (item.innerText ===currentQuestion.correct_answer)  {
+                   item.parentElement.classList.add("correct");
+                   setTimeout(() => {
+                       item.parentElement.classList.remove("correct");
+                   }, 1500);
+               }
+
+            });
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -153,7 +170,7 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 1000);
+        }, 1500);
     });
 });
 
@@ -207,9 +224,10 @@ document.getElementById("form").addEventListener('submit',function (e) {
             inputText.parentElement.classList.remove("incorrect");
             getNewQuestion();
         },1000);
+
     }
-
-
+//setting the user text field to be null.
+    inputText.value='';
 
 });
 
