@@ -1,6 +1,8 @@
 const question = document.getElementById("question");
+//const temp = document.getElementById("extra22").setAttribute('disabled','disabled');
 const choices = Array.from(document.getElementsByClassName("choice-text"));//Making the HTML collection of P tags as array of choice this is where we add the chpices
 console.log(choices);
+//const choices = Array.from(document.getElementsByClassName("choice-area"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
