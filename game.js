@@ -197,8 +197,11 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-document.getElementById("form").addEventListener('submit',function (e) {
 
+
+
+document.getElementById("form").addEventListener('submit',function (e) {
+   debugger;
     e.preventDefault();
     if (!acceptingAnswers) return;
 
