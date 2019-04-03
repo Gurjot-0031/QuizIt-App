@@ -2,13 +2,17 @@
 <html >
 <head>
     <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0 ">
     <title>CHILD</title>
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="game.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel = "stylesheet" type="text/css" href ="css/bootstrap.min.css">
 
-<style>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+    <style>
     body  {
         background-image: url("img/plane_cartoon.jpg");
         font-family: "Helvetica Neue";
@@ -25,19 +29,19 @@
     </style>
 </head>
 <body  >
-<div class="container" style="padding-top: 30px;" >
-    <div id="loader"></div>
-    <div id="game" class="justify-center flex-column hidden">
-        <div id="hud">
-            <div id="hud-item">
-                <p id="progressText" class="hud-prefix" style="font-family: 'SketchyScript'; font-size: 200%;">
+<div class="container">
+    <div id="loader" ></div>
+    <div id="game" class="hidden"  >
+        <div id="hud"  >
+            <div id="hud-item" class="col-md-3 wow fadeInUp delay-04s">
+                <p id="progressText" class="hud-prefix" style="font-family: 'SketchyScript'; color: #080808; font-size: 200%;">
                     Question
                 </p>
-                <div id="progressBar"  >
+                <div id="progressBar">
                     <div id="progressBarFull"></div>
                 </div>
             </div>
-            <div id="hud-item2">
+            <div id="hud-item2" class="col-md-3 wow fadeInUp delay-04s">
                 <p class="hud-prefix" style="font-family: 'SketchyScript'; font-size: 200%;" >
                     Music
                 </p>
@@ -46,7 +50,7 @@
 
                 </h1>
             </div>
-            <div id="hud-item3">
+            <div id="hud-item3" class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-04s">
                 <p class="hud-prefix" style="font-family: 'SketchyScript'; font-size: 200%;">
                     Score
                 </p>
@@ -55,7 +59,7 @@
                 </h1>
             </div>
         </div>
-        <div>
+        <div >
             <h2 id="question" style="font-family: 'SketchyScript'; font-size: 400%;"></h2>
         </div>
         <div class="choice-container" style="font-size: 150%;">
@@ -79,5 +83,11 @@
     </div>
 </div>
 <script src="game.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/custom.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
