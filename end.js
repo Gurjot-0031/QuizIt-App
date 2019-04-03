@@ -1,8 +1,9 @@
-const username = document.getElementById("username");
+
+
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
-
+const username1 = localStorage.getItem("username");
 const MAX_QUESTIONS = 10;
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
@@ -10,6 +11,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 5;
 var difficulty = localStorage.getItem("difficulty");
 finalScore.innerText = mostRecentScore;
+username2.innerText = username1;
 
 function checkBeforeLoad(){
   if (mostRecentScore>=10){
