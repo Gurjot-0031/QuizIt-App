@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Congrats!</title>
-    <link rel="stylesheet" href="app.css" />
-  </head>
-  <body onload="checkBeforeLoad()">
-    <div class="container">
-      <div id="end" class="flex-center flex-column">
-        <h1 id= "username2"></h1>
 
-        <h1 id="finalScore"></h1>
-        <form>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Card</title>
 
+  <link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,400italic,300italic,300|Raleway:300,400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        </form>
-        <a class="btn" href="topic.html" id="restartButton">Play Again</a>
-        <input class="btn" type="button" id="exit" onclick="bye()" value="Exit App">
+  <style>
+    input[type="number"]::placeholder {
+
+      /* Firefox, Chrome, Opera */
+      text-align: center;
+    }
+    input[type="text"]::placeholder {
+
+      /* Firefox, Chrome, Opera */
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body onLoad="checkBeforeLoad()";>
+<div class="content">
+  <div class="container wow fadeInUp delay-03s">
+    <div class="row">
+      <div class="logo text-center">
+        <img src="img/logo.png" alt="logo" width="150">
+        <h1 class="modal-header fa-bold" style="font-size:60px;font-family:serif;" >Report Card</h1>
       </div>
+
+
+      <h2 class="subs-title text-center">Congratulations!</h2>
+      <h2 class="subs-title text-center" style="padding-top: 0.5%; padding-bottom: 0.5%;">Your Score</h2>
+
     </div>
-    <script src="end.js"></script>
-  </body>
+  </div>
+
+
+  <div class="container" >
+
+    <h1 style="text-align: center; font-size:1000%; padding-top: 0.5%; margin-top: 0.5%;  " id="finalScore"></h1>
+
+    <form class="subscribe_form" style="width: 25%;  margin-left: 37%;" id="form" name="drop_list">
+
+
+      <br>
+
+      <input type="button" onclick="location.href='topic.html'"  value="Play Again" style="margin-top:7%; " name="submitButton" >
+      <input class="btn" type="button" id="exit" onclick="bye()" style="margin-top:7%;"  value="Exit App">
+    </form>
+
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/custom.js"></script>
+
+<script src="topic.js">  </script>
+</body>
+
 </html>
+
+<body onload="checkBeforeLoad()">
+<div class="container">
+  <div id="end" class="flex-center flex-column">
+    <h1 id= "username2"></h1>
+
+
+
+
+
+  </div>
+</div>
+<script src="end.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
