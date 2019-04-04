@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="game2.css">
+
 
 
 
@@ -36,11 +38,15 @@
 <body>
 <div class="content">
     <div class="container wow fadeInUp delay-03s">
+        <h1 >
+            <embed  name="lostmojo" src="img/bensound-buddy.mp3" width="89"  height="46" loop="true" style="  border-radius: 50%;" autostart="true">
+
+        </h1>
         <div class="row">
 
             <div class="logo text-center">
                 <img src="img/logo.png" alt="logo" width="150">
-                <h1 class="modal-header fa-bold" style="font-size:60px;font-family:serif;" >QUIZ IT</h1>
+                <h1 class="modal-header fa-bold" style="font-size:60px;font-family:serif; color: #5e5e5e" >QUIZ IT</h1>
             </div>
 
 
@@ -50,28 +56,29 @@
                         <div id="loader" ></div>
                         <div id="game" class="hidden">
                             <div id="hud" style="text-align: center;">
-                                <div id="hud-item" class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-02s">
-                                    <p id="progressText" class="hud-prefix" style="font-family: 'SketchyScript'; color: #080808; font-size: 200%;">
+                                <div id="hud-item" class="col-md-3 col-sm-6 col-xs-12  wow fadeInUp delay-02s"  >
+                                    <p id="progressText" class="hud-prefix" style="font-family: 'SketchyScript'; align-items: center;  color: #080808; font-size: 200%;">
                                         Question
                                     </p>
-                                    <div id="progressBar" style="color: #080808;">
-                                        <div id="progressBarFull"></div>
+                                    <div>
+                                        <div id="progressBar" style="display: inline-flex; margin-top: 5%%;" >
+                                            <div id="progressBarFull"></div>
+                                        </div>
                                     </div>
+
                                 </div>
                                 <div id="hud-item2" class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-02s">
-                                    <p class="hud-prefix" style="font-family: 'SketchyScript'; color: #080808; font-size: 200%;" >
-                                        Music
-                                    </p>
-                                    <h1 >
-                                        <embed  name="lostmojo" src="img/bensound-buddy.mp3" width="89"  height="46" loop="true" style=" align-items:center;border-radius: 50%;" autostart="true">
 
-                                    </h1>
                                 </div>
+                                <div id="hud-item4" class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-02s">
+
+                                </div>
+                                <div id=
                                 <div id="hud-item3" class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-02s">
                                     <p class="hud-prefix" style="font-family: 'SketchyScript'; color: #080808;  font-size: 200%;">
                                         Score
                                     </p>
-                                    <h1 class="hud-main-text" id="score" style="font-family: 'SketchyScript'; font-size: 300%; color: #080808;">
+                                    <h1 class="hud-main-text" id="score" style="font-family: 'SketchyScript';  margin-top: 6%; font-size: 300%; color: #080808;">
                                         0
                                     </h1>
                                 </div>

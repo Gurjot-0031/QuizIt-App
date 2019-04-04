@@ -47,12 +47,30 @@
 
 /* HUD */
 
+#hud {
+
+    justify-content: space-between;
+
+}
+
+.hud-prefix {
+    text-align: center;
+
+    font-size: 2rem;
+    margin-top: 15%;
+}
+
+.hud-main-text {
+    text-align: center;
+}
 
 #progressBar {
     width: 20rem;
     height: 4rem;
     border: 0.3rem solid #222222;
     margin-top: 1.5rem;
+
+
 }
 
 #progressBarFull {
@@ -99,7 +117,7 @@
 }
 
 /* Style the collapsible content. Note: hidden by default */
-.content {
+.content2 {
     padding: 0 18px;
     display: none;
     overflow: hidden;
