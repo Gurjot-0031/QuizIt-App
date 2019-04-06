@@ -201,7 +201,7 @@ for (i = 0; i < coll.length; i++) {
 
 
 document.getElementById("form").addEventListener('submit',function (e) {
-   debugger;
+   //debugger;
     e.preventDefault();
     if (!acceptingAnswers) return;
 
