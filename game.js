@@ -214,7 +214,7 @@ document.getElementById("form").addEventListener('submit',function (e) {
 
     // if (!acceptingAnswers) return;
 
-    if ( inputText.value.toLowerCase().trim() ===currentQuestion["choice" + currentQuestion.answer].toLowerCase().trim()){
+    if ( inputText.value.toLowerCase().trim() ===currentQuestion.correct_answer.toLowerCase().trim()){
         console.log("Correct");
         inputText.parentElement.classList.add("correct");
         setTimeout(function () {
