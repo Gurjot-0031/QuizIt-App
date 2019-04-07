@@ -37,7 +37,7 @@
       </div>
 
 
-      <h2 class="subs-title text-center">Congratulations!</h2>
+      <h2 class="subs-title text-center" id="userWonText"></h2>
       <h2 class="subs-title text-center" style="padding-top: 0.5%; padding-bottom: 0.5%;">Your Score</h2>
 
     </div>
@@ -46,14 +46,14 @@
 
   <div class="container" >
 
-    <h1 style="text-align: center; font-size:1000%; padding-top: 0.5%; margin-top: 0.5%;  " id="finalScore"></h1>
+    <h1 style="text-align: center; font-size:5vw; color: #ff7d20; padding-top: 0.5%; margin-top: 0.5%;  " id="finalScore"></h1>
 
     <form class="subscribe_form" style="width: 25%;  margin-left: 37%;" id="form" name="drop_list">
 
 
       <br>
 
-      <input type="button" onclick="location.href='topic.html'"  value="Play Again" style="margin-top:7%; " name="submitButton" >
+      <input type="button" onclick="location.href='topic.html'"  value="Play Again" style="margin-top:7%; background-color: #ff7d20" name="submitButton" id="restartButton" >
       <input class="btn" type="button" id="exit" onclick="bye()" style="margin-top:7%;"  value="Exit App">
     </form>
 
@@ -66,7 +66,7 @@
 <script src="js/wow.js"></script>
 <script src="js/custom.js"></script>
 
-<script src="topic.js">  </script>
+<script src="end.js">  </script>
 </body>
 
 </html>
