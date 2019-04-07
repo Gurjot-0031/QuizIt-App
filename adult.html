@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Adult</title>
@@ -14,7 +15,11 @@
     <link rel="stylesheet" type="text/css" href="game2.css">
     <link rel="stylesheet" href="app2.css" />
 
-
+    <script>
+        $(document).ready(function(){
+            $(this).scrollTop(10000);
+        });
+    </script>
 
 
 
@@ -42,10 +47,7 @@
 
         <div class="row">
 
-            <div class="logo text-center" style="margin-top: 0px; ">
-                <img src="img/logo.png" alt="logo" width="150">
-                <h1 class="modal-header fa-bold" style="margin-top: 0px; margin-bottom: 0px; font-size:60px;font-family:serif; color: #5e5e5e" >QUIZ IT</h1>
-            </div>
+
 
 
             <section id="about" class="section-padding" style="padding-top: 0px;">
@@ -92,7 +94,7 @@
             <h2 id="question" style="font-family: 'SketchyScript'; width: 100%;text-align: center; color: #080808; font-size: 300%; word-spacing: 0.3em;"></h2>
 
 
-            <div class="justify-center" >
+            <div class="justify-center" id ="ques" >
                 <form id="form" >
                     <input type="text" autocomplete="off" style="margin-left: 50px; margin-right: 50px;" class="choice-container" id="textField"  autofocus placeholder="Enter the Answer...">
                     <input type="submit" class="btn" value="Submit Answer" >
