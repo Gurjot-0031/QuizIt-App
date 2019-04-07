@@ -138,43 +138,44 @@ getNewQuestion = () => {
 };
 
 //ADDING LISTENERS TO ALL OF THE CHOICES..
-choices.forEach(choice => {
-    choice.addEventListener("click", e => {
-        if (!acceptingAnswers) return;
+if (user!=='adults') {
+    choices.forEach(choice => {
+        choice.addEventListener("click", e => {
+            if (!acceptingAnswers) return;
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-       // const selectedAnswer = selectedChoice.dataset["number"];
-        const selectedAnswer = selectedChoice.innerText;
+            acceptingAnswers = false;
+            const selectedChoice = e.target;
+            // const selectedAnswer = selectedChoice.dataset["number"];
+            const selectedAnswer = selectedChoice.innerText;
 
-        const classToApply =
-            selectedAnswer === currentQuestion.correct_answer ? "correct" : "incorrect";
+            const classToApply =
+                selectedAnswer === currentQuestion.correct_answer ? "correct" : "incorrect";
 
-        if (classToApply === "correct") {
-            incrementScore(CORRECT_BONUS);
-        }
-        else {
-            //if the quesion is incorrect then, we visualize the correct one
-            choices.forEach(item =>{
-               if (item.innerText ===currentQuestion.correct_answer)  {
-                   item.parentElement.classList.add("correct");
-                   setTimeout(() => {
-                       item.parentElement.classList.remove("correct");
-                   }, 1500);
-               }
+            if (classToApply === "correct") {
+                incrementScore(CORRECT_BONUS);
+            } else {
+                //if the quesion is incorrect then, we visualize the correct one
+                choices.forEach(item => {
+                    if (item.innerText === currentQuestion.correct_answer) {
+                        item.parentElement.classList.add("correct");
+                        setTimeout(() => {
+                            item.parentElement.classList.remove("correct");
+                        }, 1500);
+                    }
 
-            });
-        }
+                });
+            }
 
-        selectedChoice.parentElement.classList.add(classToApply);
+            selectedChoice.parentElement.classList.add(classToApply);
 
-        //choice.parentElement.classList.add("correct");
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        }, 1500);
+            //choice.parentElement.classList.add("correct");
+            setTimeout(() => {
+                selectedChoice.parentElement.classList.remove(classToApply);
+                getNewQuestion();
+            }, 1500);
+        });
     });
-});
+}
 
 incrementScore = num => {
     score += num;
@@ -198,7 +199,7 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-
+//ADULT STUFF
 
 document.getElementById("form").addEventListener('submit',function (e) {
    //debugger;
@@ -218,6 +219,7 @@ document.getElementById("form").addEventListener('submit',function (e) {
         inputText.parentElement.classList.add("correct");
         setTimeout(function () {
             inputText.parentElement.classList.remove("correct");
+            incrementScore(CORRECT_BONUS);
             getNewQuestion();
         },1000);
 
