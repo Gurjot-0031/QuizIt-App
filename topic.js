@@ -5,7 +5,7 @@ const username = localStorage.getItem("username");
 //getting the boolean
 var boolean = localStorage.getItem("boolean");
 if (boolean==="false") {
-    console.log(boolean +"afweve4");
+   // console.log(boolean +"afweve4");
     if (user === "adults") {
         difficulty = 'hard';
     } else if (user === "teen") {

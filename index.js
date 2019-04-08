@@ -1,14 +1,16 @@
 
-localStorage.setItem("boolean","false");
-const username = document.getElementById("name");
-localStorage.setItem("username",username.innerText);
+
+//const username = document.getElementById("name");
+//localStorage.setItem("username",username.innerText);
+
     document.addEventListener('submit',function (e) {
         e.preventDefault();
         var comboBox = document.getElementById("#comboBox");
 
 
-
         var name = document.getElementById("name").value;
+        localStorage.setItem("username",name);
+        localStorage.setItem("boolean","false");
         var age = document.getElementById("age").value;
         let userType =null;
         if (age<=12){

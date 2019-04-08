@@ -34,7 +34,7 @@ function checkBeforeLoad(){
 
   } else {
     document.getElementById("restartButton").value='Play Again with same difficulty.'
-    document.getElementById("userWonText").innerText='Bravo! \n'+username1+'\n Try again to play with higher difficulty!';
+    document.getElementById("userWonText").innerText='Bravo! \n'+username1+'\n Try again to play with same difficulty!';
 
   }
 
