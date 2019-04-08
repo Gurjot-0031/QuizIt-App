@@ -90,6 +90,10 @@ getNewQuestion = () => {
         return window.location.assign("end.html");
     }
 
+    if (user==='adult')
+    {
+        $('#myCollapsible').collapse('hide');
+    }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     //Update the progress bar
