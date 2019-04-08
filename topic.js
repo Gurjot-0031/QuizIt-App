@@ -61,27 +61,25 @@ if (boolean==="false") {
 
         var adultsTopics = new Array(
             "Entertainment: Cartoon & Animations",
-            "Entertainment: Comics",
             "Science: Mathematics",
             "Entertainment: Video Games",
             "General Knowledge",
             "Animals",
-            "Science: Gadgets",
-            "Sports",
             "Entertainment: Board Games",
             "Vehicles",
             "Entertainment: Japanese Anime & Manga",
-            "Celebrities","Geography","Politics","Science: Computers","Entertainment: Film","Entertainment: Music"
+            "Geography","Politics",
+            "Science: Computers",
+            "Entertainment: Film",
+            "Entertainment: Music"
         );
 
         var teensTopics = new Array(
             "Entertainment: Cartoon & Animations",
-            "Entertainment: Comics",
             "Science: Mathematics",
             "Entertainment: Video Games",
             "General Knowledge",
             "Animals",
-            "Science: Gadgets",
             "Sports",
             "Entertainment: Board Games",
             "Vehicles",
@@ -90,19 +88,17 @@ if (boolean==="false") {
 
         var childrenTopics = new Array(
             "Entertainment: Cartoon & Animations",
-            "Entertainment: Comics",
             "Science: Mathematics",
             "Entertainment: Video Games",
             "General Knowledge",
             "Animals",
-            "Science: Gadgets",
             "Science: Computers"
         );//
 
 
-        var adultsTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31,26,22,24,18,11,12);
-        var teensTopicsValues = new Array(32,29,19,15,9,27,30,21,16,28,31);
-        var childrenTopicsValues = new Array(32,29,19,15,9,27,30,18);
+        var adultsTopicsValues = new Array(32,19,15,9,27,16,28,26,22,24,18,11,12);
+        var teensTopicsValues = new Array(32,19,15,9,27,21,16,28,31);
+        var childrenTopicsValues = new Array(32,19,15,9,27,18);
         if(userType === "child"){
 
             for (var i=0; i < childrenTopics.length;++i){

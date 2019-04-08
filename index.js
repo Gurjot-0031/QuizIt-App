@@ -16,10 +16,12 @@
         if (age<=12){
             userType = "child";
         }
-        else if(age<=19 && age>=13)
+        else if(age<=19 && age>=13){
             userType = "teen";
-        else
+        }
+        else{
             userType = "adults";
+        }
 
         console.log(userType);
         //going to the next page
