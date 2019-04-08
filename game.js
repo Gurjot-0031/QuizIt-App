@@ -89,6 +89,7 @@ getNewQuestion = () => {
         //go to the end page
         return window.location.assign("end.html");
     }
+
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     //Update the progress bar
@@ -208,6 +209,7 @@ document.getElementById("form").addEventListener('submit',function (e) {
 
     acceptingAnswers = false;
     const inputText = document.getElementById("textField");
+
     if (inputText.value ==="")
         alert("Answer must be filled out");
 
