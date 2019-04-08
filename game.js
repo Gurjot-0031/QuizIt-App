@@ -249,3 +249,19 @@ function decodeHtml(html) {
     txt.innerHTML = html;
     return txt.value;
 }
+
+function bye(){
+
+    let msg = "Are you sure you want to exit?";
+    if ( window.confirm(msg)){
+        window.location.assign("index.html")
+    }
+}
+
+function changeTopic(){
+
+    let msg = "Are you sure you want to change topic?";
+    if ( window.confirm(msg)){
+        window.location.assign("topic.html")
+    }
+}
