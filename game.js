@@ -13,6 +13,10 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
+const sound = new Audio();
+sound.src = 'img/success1.mp3';
+const soundIncorrect = new Audio();
+soundIncorrect.src = 'img/incorrect.wav';
 
 let questions = []; //getting questions from the API.
 
@@ -157,8 +161,10 @@ if (user!=='adults') {
                 selectedAnswer === currentQuestion.correct_answer ? "correct" : "incorrect";
 
             if (classToApply === "correct") {
+                sound.play();
                 incrementScore(CORRECT_BONUS);
             } else {
+                soundIncorrect.play();
                 //if the quesion is incorrect then, we visualize the correct one
                 choices.forEach(item => {
                     if (item.innerText === currentQuestion.correct_answer) {
@@ -222,6 +228,7 @@ document.getElementById("form").addEventListener('submit',function (e) {
 
     if ( inputText.value.toLowerCase().trim() ===currentQuestion.correct_answer.toLowerCase().trim()){
         console.log("Correct");
+        sound.play();
         inputText.parentElement.classList.add("correct");
         setTimeout(function () {
             inputText.parentElement.classList.remove("correct");
@@ -232,6 +239,7 @@ document.getElementById("form").addEventListener('submit',function (e) {
 
     }
     else {
+        soundIncorrect.play();
         inputText.parentElement.classList.add("incorrect");
         setTimeout(function () {
             inputText.parentElement.classList.remove("incorrect");
