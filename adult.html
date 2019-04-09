@@ -45,7 +45,7 @@
     </style>
 </head>
 
-<body style="padding-bottom: 100px;padding-top: 10px; ">
+<body style="padding-bottom: 225px;padding-top: 10px; ">
 <div class="content">
     <div class="container wow fadeInUp delay-03s">
 
@@ -103,16 +103,15 @@
                     <input type="text" required autocomplete="off" style="margin-left: 50px; margin-right: 50px;" class="choice-container" id="textField"  autofocus placeholder="Enter the Answer...">
                     <div align="center">
                         <button style="background-color: green; color: white" type="submit" class="btn">Submit Answer</button>
-
                     </div>
                 </form>
-                <div align="center">
+                <div align="center" aria-expanded="false">
                     <button id="myCollapsible" style="background-color: #e4d00d; color: white;" ; class="btn" data-toggle="collapse" data-target="#options">Show Hint!</button>
                     <!--<button onclick="bye()" style="background-color: #ff3f4f; color: white;" class="btn" >Exit Quiz</button>-->
                 </div>
 
 
-                <div class="collapse" style="margin-left:5%; width: 90%;" id="options">
+                <div class="collapse" style="margin-left:5%; width: 90%;" id="options" >
                     <div class="choice-container" style="display: flex; width: 100%;">
                         <p class="choice-prefix" >A</p>
                         <p class="choice-text" id="boolean_one" style="pointer-events: none" data-number="1"></p>
