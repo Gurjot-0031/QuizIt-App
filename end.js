@@ -17,7 +17,7 @@ function checkBeforeLoad(){
   if (mostRecentScore>=80){
     document.getElementById("userWonText").innerText='Congratulations! \n'+username1+'\n Now you can play with higher difficulty!';
     document.getElementById("restartButton").style.visibility='visible';
-    document.getElementById("restartButton").value='Play Again with Higher Difficulty!';
+  //  document.getElementById("restartButton").value='Play Again with Higher Difficulty!';
     if (difficulty==='easy'){
       difficulty='medium';
     }
@@ -33,7 +33,7 @@ function checkBeforeLoad(){
       localStorage.setItem("boolean","true");
 
   } else {
-    document.getElementById("restartButton").value='Play Again with same difficulty.'
+    //document.getElementById("restartButton").value='Play Again with same difficulty.'
     document.getElementById("userWonText").innerText='Bravo! \n'+username1+'\n Try again to play with same difficulty!';
 
   }

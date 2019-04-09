@@ -119,3 +119,10 @@ if (boolean==="false") {
 
 
     }
+function bye(){
+
+    let msg = "Are you sure you don't want to play?";
+    if ( window.confirm(msg)){
+        window.location.assign("index.html")
+    }
+}
