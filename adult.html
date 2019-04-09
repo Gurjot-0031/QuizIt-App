@@ -100,14 +100,15 @@
                 <form id="form" >
                     <input type="text" required autocomplete="off" style="margin-left: 50px; margin-right: 50px;" class="choice-container" id="textField"  autofocus placeholder="Enter the Answer...">
                     <div>
-                        <button onclick="changeTopic()" type="submit" class="btn">Change Topic</button>
-                    <button type="submit" class="btn">Submit Answer</button>
+
+                        <input type="button" class="btn" onclick="changeTopic()" style="color: #56a5eb;" value="Change Topic">
+                        <button style="background-color: green; color: white" type="submit" class="btn">Submit Answer</button>
 
                     </div>
                 </form>
                 <div align="center">
-                    <button id="myCollapsible" class="btn3" data-toggle="collapse" data-target="#options">Show Hint!</button>
-                    <button onclick="bye()" class="btn2" >Exit Quiz</button>
+                    <button id="myCollapsible" style="background-color: yellow; color: #56a5eb;"; class="btn" data-toggle="collapse" data-target="#options">Show Hint!</button>
+                    <button onclick="bye()" style="background-color: red; color: white;" class="btn" >Exit Quiz</button>
                 </div>
 
 
