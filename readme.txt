@@ -1,10 +1,6 @@
+This project is done to develop a quiz web app using javascript and HTML. The app has different interfaces for different age groups.
 
-Theme URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
 
-
-APP URL
+#APP URL
 
 https://quizitsoen6751.herokuapp.com/
-
-CHILD theme:
-https://bootswatch.com/sketchy/
